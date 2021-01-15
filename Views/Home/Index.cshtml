@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using BasicMVC_CinemaNetProject.Models
+
+
+
+<div>
+    <h2>Cinema net</h2>
+    <hr /><br />
+    <h3>Countries</h3>
+    <hr />
+    <a href="/Country/Create">Add a new country</a>
+    <table>
+        <tr>
+            <td><p>ID</p></td>
+            <td><p>Country</p></td>
+            <td><p>Language</p></td>
+        </tr>
+        @foreach (var b in ViewBag.Countries)
+        {
+            <tr>
+                <td><p>@b.Id</p></td>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.NationalLanguage</p></td>
+            </tr>
+        }
+    </table>
+    <h3>City</h3>
+    <table>
+        <tr>
+            <td><p>ID</p></td>
+            <td><p>City</p></td>
+            <td><p>Population</p></td>
+            <td><p>Country</p></td>
+        </tr>
+        @foreach (var b in ViewBag.Cities)
+        {
+            <tr>
+                <td><p>@b.Id</p></td>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Population</p></td>
+                <td><p>@b.Country.Name</p></td>
+            </tr>
+        }
+    </table>
+    <h3>Cinemas</h3>
+    <table>
+        <tr>
+            <td><p>ID</p></td>
+            <td><p>Cinema</p></td>
+            <td><p>Email</p></td>
+            <td><p>Country</p></td>
+            <td><p>City</p></td>
+            <td><p>Street</p></td>
+        </tr>
+        @foreach (var b in ViewBag.Cinemas)
+        {
+            <tr>
+                <td><p>@b.Id</p></td>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Email</p></td>
+                <td><p>@b.Cities.Country.Name</p></td>
+                <td><p>@b.Cities.Name</p></td>
+                <td><p>@b.Street</p></td>
+            </tr>
+        }
+    </table>
+</div>
+

@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "CreateCinema";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Cinema creation form</h3>
+    <form method="post" action="">
+        <table>
+            <tr>
+                <td><p>Enter cinema name: </p></td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td><p>Enter cinema street :</p></td>
+                <td>
+                    <input type="text" name="Street" />
+                </td>
+            </tr>
+            <tr>
+                <td><p>Enter cinema Email :</p></td>
+                <td>
+                    <input type="text" name="Email" />
+                </td>
+            </tr>
+            <tr>
+                <td><p>Enter cinema City id :</p></td>
+                <td>
+                    <input type="number" name="CitiesID" />
+                </td>
+            </tr>
+            <tr><td><input type="submit" value="Create" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
+

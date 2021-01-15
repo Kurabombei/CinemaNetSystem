@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Cinema";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cinema net</h2>
+<hr />
+<br />
+<h3>Cinemas</h3>
+<hr />
+<a href="/Cinema/Create">Add a new Cinema</a>
+<table>
+    <tr>
+        <td><p>ID</p></td>
+        <td><p>Cinema</p></td>
+        <td><p>Email</p></td>
+        <td><p>Country</p></td>
+        <td><p>City</p></td>
+        <td><p>Street</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    @foreach (var b in ViewBag.Cinemas)
+    {
+        <tr>
+            <td><p>@b.Id</p></td>
+            <td><p>@b.Name</p></td>
+            <td><p>@b.Email</p></td>
+            <td><p>@b.Cities.Country.Name</p></td>
+            <td><p>@b.Cities.Name</p></td>
+            <td><p>@b.Street</p></td>
+            <td><p><a href="/Cinema/Edit/@b.Id">Edit</a></p></td>
+            <td><p><a href="/Cinema/Delete/@b.Id">Delete</a></p></td>
+        </tr>
+    }
+</table>
+

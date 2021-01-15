@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Countries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cinema net</h2>
+<hr />
+<br />
+<h3>Countries</h3>
+<hr />
+<a href="/Country/Create">Add a new country</a>
+<table>
+    <tr>
+        <td><p>ID</p></td>
+        <td><p>Country</p></td>
+        <td><p>Language</p></td>
+        <td></td>
+        <td></td>
+    </tr>
+    @foreach (var b in ViewBag.Countries)
+    {
+<tr>
+    <td><p>@b.Id</p></td>
+    <td><p>@b.Name</p></td>
+    <td><p>@b.NationalLanguage</p></td>
+    <td><p><a href="/Country/Edit/@b.Id">Edit</a></p></td>
+    <td><p><a href="/Country/Delete/@b.Id">Delete</a></p></td>
+</tr>
+    }
+</table>

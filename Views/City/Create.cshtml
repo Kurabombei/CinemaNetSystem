@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "CreateCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>City creation form</h3>
+    <form method="post" action="">
+        <table>
+            <tr>
+                <td><p>Enter city name: </p></td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td><p>Enter city population :</p></td>
+                <td>
+                    <input type="number" name="Population" />
+                </td>
+            </tr>
+            <tr>
+                <td><p>Enter city's country :</p></td>
+                <td>
+                    <input type="number" name="CountryId" />
+                </td>
+            </tr>
+            <tr><td><input type="submit" value="Create" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
